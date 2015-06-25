@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 
+
+CSS Document
+
+還元くん　縦長ページ　
+
+ナビゲーションの設定　ファイル
+
+ファイル名：　kangenkun.html
+
+cssファイル名：　navi.css
+
+作成日： 2012.1.18
+
+製作者：　石坂太一　大窪木紀子　加藤秋芳
+
+ */
+
+
+div {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	margin: 0px;
+	padding: 0px;
+}
+/*navigtation ここから*/
+#navigation {
+	float: left;
+	width: 150px;
+	padding: 20px 0 0 0;
+	position: relative;
+}
+/*#liKangen {
+	background-image: url(images_navi/navi_back_kangen.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+#liProduct {
+	background-image: url(images_navi/navi_back_product.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+#liContact {
+	background-image: url(images_navi/navi_back_contact.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}*/
+
+#mainNavi li .subNavi {
+	margin: 0px;
+}
+#mainNavi li .subNavi li {
+	border-bottom-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-color: #66ccff;
+	color: #003366;
+	height: 20px;
+	width: 120px;
+	padding: 5px 0 2px 15px;
+	margin-top: 0px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 85%;
+	background: url(/images_navi/subnavi_list.png) no-repeat left center;
+}
+/*#mainNavi li .subNavi li.subNaviLine {
+	border-bottom-width: 0px;
+	border-bottom-style: none;
+}
+*/
+.mainList {
+	margin-top: 2px;
+	padding: 0px;
+}
+
+.subNavi {
+	padding: 0px 0px 5px 0px;
+}
+	
+#mainNavi .mainList #liKangen .naviSmallfont {
+	font-size: 85%;/*フォントサイズもＩＥ君がいるために％と指定しています。*/
+}
+
+
+/*#side {
+	position: fixed !important;　!importantは先にこの記述を読み込んでくれます。（確か。）
+	position: absolute;
+	top: 330px;
+	width: 150px;
+}
+
+ここのposition: fixedのしてがＩＥで動かないので
+jQueryを使用して回避しました。
+
+
+*/
+
+/*navigtation ここまで*/
+

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 共通 start */
+html,body,h1,h2,h3,h4,h5,h6,p,pre,address,ul,li,ol,dl,dt,dd,tabel,th,td,blockquote,q,div {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background:	url(/images/body/body_bg.jpg);
+}
+
+/* ＦＬＡＳＨ用 start */
+#wrapper {
+	width:900px;
+	position:relative;
+	margin: 10px auto;
+		}
+				
+#flash {
+	width:900px;
+    height:700px;
+    }
+
+#flash_skip_text h4 {
+	font-size: 110%;
+}
+
+#flash_skip_text em{
+	font-style: normal;
+	
+}
+	
+img {
+	border:none;
+	}
+/* ＦＬＡＳＨ用 end */

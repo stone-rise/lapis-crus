@@ -1,0 +1,566 @@
+@charset "utf-8";/*このcharsetはhtmlと同じにします。ここが変わるとcssが上手く動作しません。*/
+
+/* 
+
+CSS Document
+
+還元くん　縦長ページ　
+ファイル名：　kangenkun.html
+
+cssファイル名：　kangenkun.css
+
+作成日： 2012.1.18
+
+製作者：　石坂太一　大窪木紀子　加藤秋芳
+
+cssを作ったときに最初に出てくるところです。
+ここにファイル名と製作者の名前を入れました。
+
+
+
+ */
+
+/*--------------------------基本設定　ここから--------------------------*/
+
+/*
+
+IEでchrmeも win7
+ノート　1366px*768px
+
+デスクトップ　1920px*1080px　
+*/
+
+/*
+
+ここでブラウザ間のcssを0に無くしてあげます。
+
+*/
+
+
+html,body,h1,h2,h3,h4,h5,h6,p,pre,address,ul,li,ol,dl,dt,dd,tabel,th,td,blockquote,q,div {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	border: none;
+}
+
+ a:link {
+	color: #333; 
+	text-decoration: none;
+}
+
+a:visited {
+	color: #30F;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FC6;
+	text-decoration: none;
+}
+
+a:active {
+	color: #C63;
+	text-decoration: none;
+}
+
+
+body {
+	font-size: 100%;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-weight: normal;
+	color: #333;/*colorの指定は短縮できます。#00 00 00 2つ同じ数値が続く場合のみです。*/
+	line-height: 125%;/*設定は数値のほかに%, em, pxなどで指定できますが、IEのズレがあるので%で指定してます。　*/
+	letter-spacing: 0.05em;/*このletter-spacingは文字の間を決めます。*/
+	text-align: center;/*IEがなぜか、marginのautoが効かないので、text-alignでセンターを指定してあげてます。この後、包括ボックスでleftを指定するとセンタリングされたうえで文字が左に寄ります。*/
+	background: url(/images/body_bg.jpg);
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,a,address{
+	text-align: left;
+}
+
+#pageBody {
+	background: #fff;
+}
+
+
+
+
+/*-----------------clearfixの設定ここから--------------------*/
+
+
+/*
+
+ここに教科書でやったclearfixをclass指定にして作りました。
+
+擬似クラスを使っています。
+
+
+*/
+
+.clearfix:after {
+	content:".";
+	display: block;/*ディスプレイをブロックタイプにしろと命令しています。*/
+	height: 0;/*高さを0にします。*/
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/* hide macie \*/
+
+*html .clearfix {
+	height: 1px;
+}
+
+.clearfix {
+	display: block;
+}
+
+/*-----------------
+
+clearfixの設定ここまで
+
+clearfixをclass指定してあげることでそのhtmlの中にいっぱい設定できます。
+
+--------------------*/
+
+/*------------------レイアウトの基本設定　ここから----------------*/
+
+
+
+#pageBody {
+	width: 750px;
+	margin: 5px auto;
+}
+
+/*
+pagebodyの幅を指定します。
+marginを纏めて指定しています。　ドリたんを使うと1つ1つ出てくるのに対して
+手打ちなので自由に設定できます。
+*/
+
+
+#rightBox {
+	float: right;
+	width: 580px;
+	margin: 20px 0 0 0;
+}
+
+
+/*
+
+なるべく
+マージンとパディングで
+幅をとるようにしてあげてくださいなんですが、
+
+IEのバグがあるために、positionを併用することをオススメします。
+*/
+
+/*------------------レイアウトの基本設定　ここまで----------------*/
+
+
+
+
+
+/*--------------------------基本設定　ここまで--------------------------*/
+
+
+
+/*--------------------ヘッダー部分の設定　ここから-------------------*/
+
+
+#header {
+	position: relative;/*このrelativeで基準となる位置を決めてあげます。*/
+	top: 0;
+	left: auto;
+	right: auto;/*記述文法は、top,left,right,bottomの4つです。*/
+	width: 750px;
+	height: 300px;
+}
+
+#logo {
+	position: relative;
+	top: 10px;
+	left: 590px;
+}
+
+
+/*--------------------ヘッダー部分の設定　ここまで-------------------*/
+
+
+
+
+#container {
+	position: relative;
+	top: 20px;
+	width: 750px;
+	margin: 20px auto;
+}
+
+
+/*----------------------------------製品情報　エリア　設定　ここから---------------------------------------*/
+
+#wrapper {
+	width: 580px;
+	color: #333;
+	margin: 0px 0 0 0;
+}
+
+*html #container {
+	position: relative;
+	top: 0;
+	width: 750px;
+	margin: 0;
+}
+
+/*-------------------------包括ボックスの設定　ここまで------------------------------*/
+
+#wrapper h3 {
+	margin: 25px 0 0px 0;
+}
+
+#wrapper .bottleHeadline {
+	height: 30px;
+	background: url(/images/head_line/Product_page_Head_line_02_bg.png) no-repeat left top;
+	padding: 2px 0 0px 40px;
+	width: 100%;
+}
+
+/*-------------------------------ヘッドライン#3　の設定　ここまで----------------------------------*/
+
+#Characteristic {
+	width: 570px;
+	height: 200px;
+	margin: 15px 0;
+}
+
+
+#leftCharacteristic {
+	float: left;
+	width: 250px;
+	height: 200px;
+}
+
+#rightCharacteristic {
+	float: right;
+	width: 310px;
+	height: 200px;
+	padding: 30px 0 0 0;
+	font-size: 100%;
+}
+
+
+/*-------------------flashエリアの設定　ここまで-------------------*/
+
+
+#bottleProduct {
+	clear: both;
+	width: 100%;
+}
+
+#bottleProduct h3 {
+	margin: 0 0 25px 0;
+}
+
+
+
+
+/*--------------------ボトル情報エリアの設定　ここまで-------------------*/
+
+/*---------------------ボトルの使用方法の設定　ここから-----------------------*/
+
+#bottle_Usage {
+	width: 570px;
+	position: relative;
+}
+
+#bottle_Usage h3 {
+	margin: 15px 0 15px 0;
+}
+
+.bottleHeadline {
+	width: 570px;
+}
+
+
+/*-------------------------還元水素茶の作り方の設定　ここから-----------------------*/
+
+#make_tea {
+	position: relative;
+	width: 570px;
+	height: 180px;
+	margin: 0px 0 0 0;
+	background: url(/images/product_page_how_to_make_image/Product_how_to_make_area_image_bg.png) no-repeat left top;
+}
+
+#how_to_Make {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+#how_to_make_text {
+	position: absolute;
+	top: 105px;
+	left: 25px;
+	width: 400px;
+	font-size: 95%;
+	font-weight: bold;
+}
+
+
+
+/*-------------------------還元水素茶の作り方の設定　ここまで-----------------------*/
+
+
+/*-------------------------還元水素茶の保管のやり方の設定　ここから-----------------------*/
+
+#usage {
+	position: relative;
+	width: 570px;
+	height: 180px;
+	margin: -10px 0 0 0;
+	background: url(/images/product_page_how_to_make_image/Product_usage_area_image_bg.png) no-repeat left top;
+}
+
+#bottleUsage {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+#bottleUsage_text {
+	position: absolute;
+	top: 50px;
+	left: 200px;
+	width: 360px;
+	font-size: 95%;
+	font-weight: bold;
+}
+
+/*-------------------------還元水素茶の保管のやり方の設定　ここまで-----------------------*/
+
+
+/*-------------------------還元水素茶のお手入れのやり方の設定　ここから-----------------------*/
+
+#mantenans {
+	position: relative;
+	width: 570px;
+	height: 180px;
+	margin: -10px 0 0 0;/*ここのマイナス指定は表示されなかった為につかいました。*/
+	background: url(/images/product_page_how_to_make_image/Product_mantenans_area_image_bg.png) no-repeat left top;
+}
+
+#bottlementanas {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+#bottlementanas_List {
+	position: absolute;
+	top: 35px;
+	left: 200px;
+	width: 360px;
+	font-size: 95%;
+	font-weight: bold;
+}
+
+#bottle_Usage strong {
+	font-size: 110%;
+	color: #ff0000;
+}
+
+/*-------------------------還元水素茶のお手入れのやり方の設定　ここまで-----------------------*/
+
+
+/*---------ボトル使用方法の設定　ハック　ここから---------*/
+
+
+
+/*---------------------ボトルの使用方法の設定　ここまで-----------------------*/
+
+/*-------------------ボトルの使用上の注意点の設定　ここから---------------------*/
+
+#bottleAttention {
+	width: 570px;
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+
+
+
+#attention_boilingWater {
+	width: 280px;
+	height: 120px;
+	background: url(/images/Product_page_attention_NO_boiling_water_bg.png) no-repeat left top;
+	float: left;
+	margin: 15px 0;
+}
+
+#boilingWater {
+	width: 170px;
+	margin: 5px 0 0 100px;
+}
+
+#boilingWater dd {
+	width: 140px;
+	margin: 10px 0 0 10px;
+	font-size: 85%;
+	font-weight: bold;
+	line-height: 110%;
+}
+
+
+/*----------------お湯を入れない　エリア　設定　ここまで---------------*/
+
+#attention_noDrink {
+	width: 280px;
+	height: 120px;
+	background: url(/images/Product_page_attention_NO_drink_bg.png) no-repeat left top;
+	float: right;
+	margin: 15px 0;
+}
+
+#noDrink {
+	width: 170px;
+	margin: 5px 0 0 100px;
+}
+
+#noDrink dd {
+	width: 140px;
+	margin: 5px 0 0 10px;
+	font-size: 80%;
+	font-weight: bold;
+	line-height: 120%;
+	
+}
+
+/*-------------------お茶以外を入れない　エリア　設定　ここまで------------------------*/
+
+
+#attention_noSun {
+	width: 280px;
+	height: 120px;
+	background: url(/images/Product_page_attention_.no_sun_bgpng.png) no-repeat left top;
+	float: left;
+	margin: 0 0 15px 0;
+}
+
+#noSun {
+	width: 170px;
+	margin: 5px 0 0 100px;
+}
+
+#noSun dd {
+	width: 140px;
+	margin: 5px 0 0 10px;
+	font-size: 80%;
+	font-weight: bold;
+	line-height: 120%;
+}
+
+/*---------------------直射日光を当てない　エリア　設定　ここまで----------------------*/
+
+
+#attention_noDrop {
+	width: 280px;
+	height: 120px;
+	background: url(/images/Product_page_attention_bottle_drop_bg.png) no-repeat left top;
+	float: right;
+	margin: 0 0 15px 0;
+}
+
+#noDrop {
+	width: 170px;
+	margin: 5px 0 0 100px;
+}
+
+#noDrop dd {
+	width: 150px;
+	padding: 5px 0 0 15px;
+	font-size: 80%;
+	font-weight: bold;
+	line-height: 120%;
+}
+
+
+/*-----------------ボトルを落とさない　エリア　設定　ここまで----------------*/
+
+#noUse_area {
+	clear: both;
+	width: 570px;
+	height: 120px;
+	background: url(/images/product_Attention_NO_empty_bg.png) no-repeat left top;
+}
+
+#noUse {
+	width: 405px;
+	padding: 5px 0 0 110px;
+}
+
+#noUse dd {
+	width: 395px;
+	padding: 10px 0 0 15px;
+	font-size: 80%;
+	font-weight: bold;
+	line-height: 110%;
+	
+}
+
+/*---------------------ボトルを長期間空けない　エリア　設定　ここまで---------------------*/
+
+
+#cap_area {
+	width: 570px;
+	height: 60px;
+	margin: 15px 0 0 0;
+	background: url(/images/product_page_attention_area_cap_bg.png) no-repeat left top;
+	position: relative;
+}
+
+#capArea {
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	width: 450px;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+
+/*-------------------ボトルの使用上の注意点の設定　ここまで---------------------*/
+
+/*------------------------footerの設定ここから-------------------------*/
+
+
+#footer {
+	clear: both;
+	height: 45px;
+	width: 750px;
+	background: #039;
+}
+
+address {
+	margin:0px auto;
+	padding: 15px 0 0 0;
+	text-align: center;
+	font-style: normal;
+	color: #fff;
+}
+
+#kj-mean {
+	padding: 20px 0 20px 0 15px;
+}
+
+
+
+/*------------------------footerの設定ここまで-------------------------*/

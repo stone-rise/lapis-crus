@@ -1,0 +1,362 @@
+@charset "utf-8";
+/* 
+
+CSS Document
+
+還元くん　縦長ページ　
+
+ナビゲーションの設定　ファイル
+
+ファイル名：　kangenkun.html
+
+cssファイル名：　navi.css
+
+作成日： 2012.1.18
+
+製作者：　石坂太一　大窪木紀子　加藤秋芳
+
+ */
+
+/*
+
+なぜかcontainerなどの親ボックスのプロパティを継承しないのでハックつかいました。
+
+ハックの使い方について、
+
+*html ～と書くと、ＩＥ以外は認識できません。
+そのほかにも、_アンダーバーを入れたり、することで
+ＩＥにしか掛からないcssの指定が出来ます。
+
+がっ！！！！
+
+ここが重要です。！！！！！
+cssチェッカーというものがありまして、そのチェッカーに引っかかってしまいますので
+使う際は気をつけてください。
+
+
+*/
+
+*html #top {
+	margin: 0 0 0 5px;
+}
+
+*html #buy-process {
+	margin: 15px 0 0 -5px;
+}
+
+#top h2 {
+	 margin: 0px 0 15px 0; 
+}
+
+.bottleHeadline {
+	height: 30px;
+	background: url(/images/head_line/Product_page_Head_line_02_bg.png) no-repeat left top;
+	padding: 5px 0 0px 40px;
+	width: 100%;
+}
+
+/*購入の流れエリアの設定　ここから*/
+
+
+#buy-process {
+	margin: 15px 0 0 0;
+	width: 570px;
+	height: 150px;
+	background: url(/images/images_contact/contact_image.gif) no-repeat left top;
+}
+
+#buy-process ol {
+	padding: 90px 0 0 30px;
+	width: 570px;
+}
+
+#buy-process ol li {
+	background: url(/images/list_mark/list_makcer.png) no-repeat left center;
+	padding: 1px 0 0 15px;
+	font-size: 75%;
+	line-height: 1.3;
+}
+
+/*購入の流れエリアの設定　ここまで*/
+
+/*購入フォームの設定　ここから*/
+
+form {
+	width: 553px;
+	margin: 20px 0;
+	background-color:#e6e6e6;
+	border-left:solid 15px #7AC0F4;
+	border-top:solid 2px #7AC0F4;
+	border-right:solid 2px #7AC0F4;
+	border-bottom:solid 2px #7AC0F4;
+}
+
+form caption {
+	padding: 10px 0 10px 0;
+	font-size: 150%;
+	border-bottom:solid 15px #7AC0F4;
+}
+
+#purchase table {
+	width: 553px;
+	padding: 20px 0px 20px 0;
+}
+
+#purchase th {
+	padding: 20px 0 20px 20px;
+	width: 250px;
+	text-align: left;
+	font-size: 95%;
+}
+
+#purchase th em {
+	color: #ff3333;
+	font-style: normal;
+}
+
+#purchase td {
+	width: 310px;
+	text-align: left;
+}
+
+.text1 {
+	width: 200px;
+}
+
+.text2 {
+	width: 3em;
+}
+
+.text4 {
+	width: 4em;
+}
+
+#buySubmit {
+	margin: 20px 0 20px 40px;
+}
+
+/*フォーム下の注意書きの設定です。ここから*/
+
+.attentionList {
+	padding: 20px 0 20px 20px;
+}
+
+.attentionList .noImage {
+	background: url(/images/list_mark/list_makcer.png) no-repeat left center;
+	padding: 0px 0 0px 15px;
+	font-size: 85%;
+}
+
+.attentionList li {
+	background: none;
+	font-size: 85%;
+}
+
+.attentionList .indent_List {
+	padding: 0 0 0 15px;
+}
+
+/*フォーム下の注意書きの設定ここまで*/
+
+
+/*
+
+フォームの幅がどうしてもそろわないのでハックです。理由はIEのpaddingとborderの解釈の違いです。
+
+IEのwidthの解釈についてです。（僕が知っている範囲で）
+
+IEはボックスの幅を計算するときにpaddingも一緒に計算してしまいます。
+
+他にも、borderも計算してしまうブラウザ君もいます。
+
+ので、幅を決める際は気をつけてください。
+
+*/
+
+*html form {
+	width: 500px;
+	margin: 20px 0 20px -5px;
+}
+
+*html ##buySubmit {
+	margin: 20px 0 20px 95px;
+}
+
+*html #dtSubmit {
+	margin: 20px 0 20px 95px;
+}
+
+/*
+IEはボックスのpaddingとborderもwidthとして計算します。気をつけてください。
+ただし、このハック（ほとんどのハックは基本的にチェッカーに引っかかります。すいません。）
+*/
+
+
+/*購入フォームの設定　ここまで*/
+
+/*Ｑ＆Ａコーナーおよび推奨環境の注意書きの設定ここから*/
+
+#quetion_area {
+	
+}
+
+#quetion_area # {
+	margin:  0;
+}
+
+#quetion {
+	width: 550px;
+	margin: 10px 0 10px 10px;
+}
+
+.qa-title {
+	width: 540px;
+	font-size: 90%;
+	border-bottom:solid 1px #333333;
+	font-weight:bold;
+	color:#F7931E;
+	padding: 5px 0 0 0
+}
+
+#quetion dd {
+	width: 520px;
+	font-size: 88%;
+	margin: 0 0 10px 15px;
+}
+
+/*Ｑ＆Ａコーナーおよび推奨環境の注意書きの設定ここから*/
+
+/*資料請求・お問い合わせの設定ここから*/
+
+#qa-documents {
+	text-align: right;
+	font-size: 103%;
+	font-weight: bold;
+	margin: 15px 0;
+	letter-spacing: -0.05em;
+}
+
+/*資料請求・お問い合わせの設定ここまで*/
+
+
+/*資料請求・お問い合わせフォームの設定ここから*/
+
+
+#document table {
+	width: 553px;/*ここで中途半端な数値をいれているのはborderがあるためそれも計算していれました。*/
+	padding: 20px 0px 20px 0;
+}
+
+#document th {
+	padding: 20px 0 20px 20px;
+	width: 250px;
+	text-align: left;
+	font-size: 95%;
+}
+
+#document th em {
+	color: #ff3333;
+	font-style: normal;
+}
+
+#document td {
+	width: 310px;
+	text-align: left;
+	font-size: 60%;
+}
+
+.text3 {
+	width: 90%;
+}
+
+#dtSubmit {
+	margin: 20px 0 20px 40px;
+}
+
+
+/*資料請求・お問い合わせフォームの設定ここまで*/
+
+/*会社情報の設定ここから*/
+
+#kaisha-jyouhou {
+	position: relative;
+	width: 570px;
+	padding: 0 0 20px 0;
+}
+
+
+#kaisha-jyouhou #kj-rogo {
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	width: 119px;
+}
+
+#kaisha-jyouhou table {
+	width: 570px;
+	margin: 0px 0;
+}
+
+*html #kaisha-jyouhou table {
+	width: 570px;
+	margin: 20px 0;
+}
+
+#kaisha-jyouhou th {
+	border-bottom: 2px solid #3399ff;
+	padding: 20px 0 20px 0;;
+	wdith: 240px;
+	text-align: left;
+	font-size: 120%;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+
+}
+
+#kaisha-jyouhou th img {
+	margin: 0 0 -5px 0;
+}
+
+#kaisha-jyouhou td {
+	text-align: left;
+	font-size: 120%;
+	font-weight: 600;
+	
+}
+
+#kaisha-jyouhou td {
+	border-bottom: 2px solid #3399ff;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	padding: 7px 0 0 0;
+}
+
+#kj-mean {
+	margin: 0px 0 0 0;
+	font-size: 90%;
+	background: url(/images/list_mark/list_makcer.png) no-repeat left center;
+	padding: 0 0 0 15px;
+}
+
+*html #kj-mean {
+	margin: -20px 0 0 0;
+	font-size: 90%;
+	background: url(/images/list_mark/list_makcer.png) no-repeat left center;
+	padding: 0 0 0 15px;
+}
+
+/*会社情報の設定　ここまで*/
+
+
+/*ページトップへのリンク設定と周りのマージンなどの余白の設定ここから*/
+
+.pagetop{
+	text-align: right;
+	padding: 20px 15px 10px 0;
+	font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+}
+
+
+
+/*ページトップへのリンク設定と周りのマージンなどの余白の設定ここから*/
+
+
+

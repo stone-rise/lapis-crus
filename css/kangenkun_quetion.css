@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+/* 
+
+CSS Document
+
+還元くん　縦長ページ　
+
+ナビゲーションの設定　ファイル
+
+ファイル名：　kangenkun.html
+
+cssファイル名：　navi.css
+
+作成日： 2012.1.18
+
+製作者：　石坂太一　大窪木紀子　加藤秋芳
+
+ */
+
+/* 還元水素水とは start */
+
+
+/* 還元水素水とは start */
+#kangensui-toha {
+	width:570px;
+	margin:0px;
+	padding:0px;
+	position: relative;
+}
+
+#kangensui-toha_box1 {
+	width:550px;
+	height:179px;
+	background-image:url(/images_k_v1/k_back_img01.gif);
+	margin:30px 0px 0px 0px;
+	padding:5px 5px 5px 0px;
+	line-height: 20px;
+	font-family: "小塚ゴシックpro","ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size: 100%;
+	font-weight:bold;
+	color: #333;
+	background-repeat: no-repeat;
+}
+
+#kangensui-toha_box1 #kangensui_text {
+	position: absolute;
+	top: 80px;
+	left: 15px;
+}
+
+
+/*----石坂　追加----*/
+
+#kangensui-toha_box1 h3 {
+	margin: 10px 0 8px 15px;
+	font-size: 110%;
+}
+	
+#kangensui-toha_box1 p {
+	width: 440px;
+	padding: 0 20px 0 30px;
+}
+
+#kangensui-toha_box1 strong {
+	color: #0071bc;
+}
+
+#kangensui-toha_box1 em {
+	color: #ff3333;
+	font-style: normal;
+}
+
+/*---石坂　追加　ここまでです。---*/
+
+#bold_blue {
+	font-weight:600;
+	color: #0071bc;
+	}
+
+#bold_black {
+	font-weight:600;
+	color: #333333;
+	}
+
+#bold_red {
+	font-weight:600;
+	color: #ff3333;
+	}
+	
+/*
+
+実はこのidは全部重複していました。
+
+idは1つだけに使える名前で
+classは複数に使う名前です。
+
+	
+*/
+	
+/*--------------#kangensui-toha_box1　設定　ここまで-------------*/
+
+/*-----------#kangensui-toha_box2の設定ここから-------------*/
+
+#kangensui-toha_box2 {
+	margin-top:10px;
+}
+
+/*
+
+tableの指定です。
+
+htmlでも触ることはできますが、
+cssの方で幅と高さをいじるように指定しています。
+
+*/
+
+#kangensui-toha_box2 table {
+	margin: 15px 0 0 5px;
+	width: 100%; 
+}
+	
+#kangensui-toha_box2 th {
+	text-align:left;
+	vertical-align:top;
+	padding: 5px 0 0 0;
+}
+
+#kangensui-toha_box2 table .box2_thead {
+	padding:5px 0 10px 0;
+}
+
+	
+#kangensui_p {
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 530px;
+	font-family: "小塚明朝pro","ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:120%;
+	line-height:1.5;
+	font-weight: 500;
+	text-indent: 1em;
+}
+
+#kangensui-toha_box3 {
+	background-image:url(/images_k_v1/k_back_img02.gif);
+	font-weight:600;
+	height:210px;
+	margin:20px 0;
+	padding:0px;
+	background-repeat: no-repeat;
+	}
+	
+#kangensui-toha_box3 p {
+	font-family:"小塚明朝pro","ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:110%;
+	color: #333;
+	line-height: 1.2;
+	margin-top:10px;
+	margin-left:75px;
+	padding: 10px 0 0 0px;
+}
+
+br {
+	letter-spacing: 0;
+}
+
+#kangensui-toha_box3 strong {
+	color: #ff3333;
+	font-size: 102%;
+}
+
+/*
+文章を強調するstrongをhtmlで入れることで、
+そのstrongだけに色とフォントサイズの変更を加えています。
+*/
+
+#kangensui-toha_box4 {
+	width: 500px;
+	position: relative;
+}
+
+#box4_head {
+	float: left;
+	width: 180px;
+	font-size: 80%;
+}
+
+#indent {
+	width: 320px;
+	font-size: 75%;
+}
+
+#Ulist_container {
+	float: right;
+	width: 320px;
+}
+
+
+#box4_Ulist {
+	padding: 20px 0 0 0;
+	font-size: 85%;
+}
+
+#box4_Ulist li {
+	background: url(/images/list_mark/list_makcer.png) no-repeat left cneter;
+	padding: 0 0 0 15px;
+}
+
+
+#kangensui-toha_box4 p {
+	font-family:"小塚明朝pro","ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 75%;
+}
+
+.indent {
+		text-indent:139px;
+	}
+	
+#margin {
+		margin-left:139px;
+	}
+
+#kangensui-toha_box5 {
+	clear: both;
+	margin: 0px 0 0 70px;
+	}
+			
+#setumeibun {
+	font-family:"小塚明朝pro","ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:12px;
+	text-align: center;
+	margin: 20px 0 15px 0;
+}
+
+/* 還元水素水とは end */
